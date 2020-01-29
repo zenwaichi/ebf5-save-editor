@@ -1,0 +1,31 @@
+<html>
+<head>
+
+<style>
+textarea,button {display:block}
+</style>
+
+</head>
+<body>
+
+<textarea></textarea>
+
+<button>decrypt</button>
+
+
+<textarea></textarea>
+
+<button>encrypt</button>
+<script>
+var a = document.querySelectorAll('textarea')[0],
+b = document.querySelectorAll('textarea')[1],
+dec = document.querySelectorAll('button')[0],
+enc = document.querySelectorAll('button')[1];
+
+dec.onclick = e=>{b.value = atob(a.value)}
+
+enc.onclick = e=>{a.value = btoa(b.value)}
+</script>
+
+</body>
+</html>
